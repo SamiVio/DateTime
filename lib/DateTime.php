@@ -644,7 +644,7 @@ class DateTime extends \DateTime implements \JsonSerializable
 	 *
 	 * @return string
 	 */
-	public function jsonSerialize()
+	public function jsonSerialize(): string
 	{
 		return (string) $this;
 	}
@@ -657,7 +657,7 @@ class DateTime extends \DateTime implements \JsonSerializable
 	 *
 	 * @inheritdoc
 	 */
-	public function setTimezone($timezone)
+	public function setTimezone(string $timezone): DateTime
 	{
 		if ($timezone === 'local')
 		{
@@ -787,7 +787,7 @@ class DateTime extends \DateTime implements \JsonSerializable
 	 *
 	 * @inheritdoc
 	 */
-	public function format($format)
+	public function format(string $format): string
 	{
 		if (($format == self::DATE || $format == self::DB) && $this->is_empty)
 		{
