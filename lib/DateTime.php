@@ -657,7 +657,7 @@ class DateTime extends \DateTime implements \JsonSerializable
 	 *
 	 * @inheritdoc
 	 */
-	public function setTimezone(string $timezone): DateTime
+	public function setTimezone($timezone): DateTime
 	{
 		if ($timezone === 'local')
 		{
